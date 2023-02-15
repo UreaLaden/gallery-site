@@ -7,14 +7,15 @@ export const styles = mergeStyleSets({
     height: "100%",
     color: Colors.White,
     display: "flex",
-    ":hover":{
-        "#buttonMain":{
-            backgroundColor:Colors.Orange
-        },
-        "#buttonSelector":{
-            backgroundColor:Colors.AlmostBlack
-        }
-    }
+    ":hover": {
+        cursor:'pointer',
+      "#buttonMain": {
+        backgroundColor: Colors.Orange,
+      },
+      "#buttonSelector": {
+        backgroundColor: Colors.AlmostBlack,
+      },
+    },
   },
   buttonMain: {
     "@media screen and (max-width:750px)": {
@@ -23,28 +24,30 @@ export const styles = mergeStyleSets({
       width: "80%",
       display: "flex",
       alignItems: "center",
-      justifyContent: "center",      
+      justifyContent: "center",
     },
   },
-  buttonText:{
+  buttonText: {
     ...Fonts.BodyS,
-    fontFamily:"Big Shoulders Display Black, sans-serif",
-    fontWeight:"600",
-    transform:"scaleY(1.82)",
-    letterSpacing:"1px",
-    padding:"0 10%"
+    fontFamily: "Big Shoulders Display Black, sans-serif",
+    fontWeight: "600",
+    transform: "scaleY(1.82)",
+    letterSpacing: "1px",
+    padding: "0 10%",
   },
   buttonSelector: {
     "@media screen and (max-width:750px)": {
       backgroundColor: Colors.Orange,
       height: "100%",
       width: "25%",
-      display:"flex",
-      alignItems:'center',
-      justifyContent:'center'
-    },    
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+    },
   },
-  buttonIcon:{
-    transform:"scale(1.5)"
-  }
+  buttonIcon: {
+    "@media screen and (max-width:750px)": {
+      transform: "scale(1.5)",
+    },
+  },
 });

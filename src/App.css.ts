@@ -192,8 +192,17 @@ export const styles = mergeStyleSets({
       display: "flex",
       alignItems: "center",
       justifyContent: "space-between",
-      height:"25%"
+      height:"25%",
     },
   },
-  icon: {},
+  icon: {
+    ":hover": {
+        "cursor":"pointer",
+        "svg": {
+          "path": {
+            "fill": Colors.Orange,
+          },
+        },
+    }
+  },
 });
