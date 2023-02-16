@@ -9,6 +9,8 @@ import { Copy, Images, SVGIcons } from "./utils/helpers";
 import { registerIcons } from "@fluentui/react";
 import Button from "./components/Button/Button";
 import Footer from "./components/Footer/Footer";
+import Map from "./components/Map/Map";
+
 
 registerIcons(SVGIcons);
 
@@ -97,9 +99,10 @@ const App = () => {
     <div className={styles.appContainer}>
       <section className={styles.section}>
         <div className={styles.map}>
-          <div className={styles.button}>
+          <div className={styles.mapButton}>
             <Button buttonText={"BACK TO HOME"} direction={"left"} />
           </div>
+          <Map/>
         </div>
         <div className={styles.location}>
           <div className={styles.locationHeader}>{Copy.pageThree.title}</div>

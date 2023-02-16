@@ -145,9 +145,16 @@ export const styles = mergeStyleSets({
     height: "12%",
     width: "70%",
   },
+  mapButton: {
+    height: "8vh",
+    width: "70%",
+    position:'absolute',
+    top:0,
+    left:0,
+    'z-index':5
+  },
 
   map: {
-    backgroundColor: "blue",
     height: "65vh",
   },
   location: {
