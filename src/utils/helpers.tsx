@@ -69,6 +69,12 @@ export const Copy = {
     description:
       "We're excited to welcome your to our gallery and see how our collections influence you.",
   },
+  pageThree:{
+    title:"OUR LOCATION",
+    addressHeader:"99 KING STREET",
+    address:['Newport','RI 02840','United States of America'],
+    description:"Our newly opened gallery is located near the Edward King House on 99 King Street, the Modern Art Gallery is free to all visitors and open seven days a week from 8am to 9pm."
+  },
   footer: {
     title1: "MODERN",
     title2: "ART GALLERY",

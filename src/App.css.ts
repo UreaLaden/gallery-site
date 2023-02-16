@@ -10,9 +10,14 @@ export const styles = mergeStyleSets({
       height: "100vh",
     },
   },
+  sectionSecondary: {
+    "@media screen and (max-width:750px)": {
+      height: "68vh",
+    },
+  },
   footerSection: {
     "@media screen and (max-width:750px)": {
-      height: "80vh",
+      height: "65vh",
     },
   },
   headerContainer: {
@@ -135,74 +140,69 @@ export const styles = mergeStyleSets({
       color: Colors.DarkGrey,
     },
   },
-  footer: {
-    height: "100%",
-    maxWidth: "100vw",
-    display: "flex",
-    flexDirection: "column-reverse",
-  },
-  footerContainer:{
-      "@media screen and (max-width:750px)": {
-      height: "50vh",
-      maxWidth:"100%",
-      padding:"3vw",
-      backgroundColor: Colors.AlmostBlack
-    }
 
-  },
-  footerContent: {
-    "@media screen and (max-width:750px)": {
-      width: "100%",
-      height:"100%",
-      color: Colors.White,
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "space-around",
-    },
-  },
   button: {
     height: "12%",
     width: "70%",
   },
-  footerHeader: {
+
+  map: {
+    backgroundColor: "blue",
+    height: "65vh",
+  },
+  location: {
+    backgroundColor: Colors.AlmostBlack,
+    color: Colors.White,
+    height: "60vh",
+    display: "flex",
+    flexDirection: "column",
+    rowGap:"10vh",
+    padding:"3vw"
+  },
+  locationHeader: {
     "@media screen and (max-width:750px)": {
-      ...Fonts.HeadingS,
+        ...Fonts.HeadingL,
+        fontFamily: "Big Shoulders Display Black, sans-serif",
+        fontSize: "3rem",
+        letterSpacing: "0",
+        fontWeight: "900",
+        lineHeight: "2vh",
+        paddingTop:"11%",
+        height: "0%",
+        transform: "scaleY(1.25)",
+      },
+  },
+  locationAddressHeader: {
+    color: Colors.Orange,
+    "@media screen and (max-width:750px)": {
+      ...Fonts.HeadingL,
       fontFamily: "Big Shoulders Display Black, sans-serif",
-      //   fontSize: "2rem",
+      fontSize: "2.3rem",
       letterSpacing: "0",
       fontWeight: "900",
-      lineHeight: "3.1vh",
-      height: "25%",
-      paddingTop:"15%",
-      transform: "scaleY(1.35)",
+      lineHeight: "2vh",
+      height: "0%",
+      transform: "scaleY(1.25)",
+      marginBottom:"-8%"
     },
   },
-  footerDescription: {
+  locationAddress: {
     "@media screen and (max-width:750px)": {
       ...Fonts.BodyS,
-      lineHeight: "3.65vh",
+      lineHeight: "3.1vh",
       fontFamily: "Outline Light, sans-serif",
-      fontSize: "1.35rem",
+      fontSize: "1.5rem",
+      height: "0",
+      marginBottom:"5%"
+    },
+  },
+  locationContent: {
+    "@media screen and (max-width:750px)": {
+      ...Fonts.BodyS,
+      lineHeight: "3.1vh",
+      fontFamily: "Outline Light, sans-serif",
+      fontSize: "1.5rem",
       height: "25%",
     },
-  },
-  social: {
-    "@media screen and (max-width:750px)": {
-      width: "25%",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "space-between",
-      height:"25%",
-    },
-  },
-  icon: {
-    ":hover": {
-        "cursor":"pointer",
-        "svg": {
-          "path": {
-            "fill": Colors.Orange,
-          },
-        },
-    }
   },
 });

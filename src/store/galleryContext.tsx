@@ -7,8 +7,10 @@ export interface WindowSpecs {
 
 export interface GalleryContextProps {
   windowSize: WindowSpecs;
+  onHomePage:boolean;
   updateWindowSize: (windowSize: WindowSpecs) => void;
   getImageSource:(image:string) => string;
+  updateCurrentPage:() => void;
 }
 
 interface GalleryContextProviderProps {
@@ -17,8 +19,10 @@ interface GalleryContextProviderProps {
 
 export const GalleryContext = React.createContext<GalleryContextProps>({
   windowSize: { height: 0, width: 0 },
+  onHomePage:true,
   updateWindowSize: (windowSize: WindowSpecs) => {},
-  getImageSource:(image:string) => ""
+  getImageSource:(image:string) => "",
+  updateCurrentPage:() => {}
 });
 
 export const GalleryContextProvider: React.FC<GalleryContextProviderProps> = (
@@ -28,6 +32,11 @@ export const GalleryContextProvider: React.FC<GalleryContextProviderProps> = (
     height: window.innerHeight,
     width: window.innerWidth,
   });
+  const [isHomePage,setIsHomePage] = React.useState<boolean>(true);
+
+  const setIsHomePageHandler = () => {
+    setIsHomePage(isHomePage => !isHomePage)
+  }
 
   const setViewPortHandler = (windowSize: WindowSpecs) => {
     setViewPort((viewPort) => (viewPort = windowSize));
@@ -47,8 +56,10 @@ export const GalleryContextProvider: React.FC<GalleryContextProviderProps> = (
 
   const context = {
     windowSize: viewPort,
+    onHomePage:isHomePage,
     updateWindowSize: setViewPortHandler,
-    getImageSource:getImageSourceHandler
+    getImageSource:getImageSourceHandler,
+    updateCurrentPage:setIsHomePageHandler
   };
 
   return (

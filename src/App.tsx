@@ -6,8 +6,9 @@ import {
   WindowSpecs,
 } from "./store/galleryContext";
 import { Copy, Images, SVGIcons } from "./utils/helpers";
-import { Icon, registerIcons } from "@fluentui/react";
+import { registerIcons } from "@fluentui/react";
 import Button from "./components/Button/Button";
+import Footer from "./components/Footer/Footer";
 
 registerIcons(SVGIcons);
 
@@ -24,7 +25,7 @@ const App = () => {
     };
   });
 
-  return (
+  const mainPageContent = (
     <div className={styles.appContainer}>
       <section className={styles.section}>
         <header className={styles.headerContainer}>
@@ -88,29 +89,35 @@ const App = () => {
         </div>
       </section>
       <section className={styles.footerSection}>
-        <div className={styles.footer}>
-          <div className={styles.footerContainer}>
-            <div className={styles.footerContent}>
-              <div className={styles.footerHeader}>
-                {Copy.footer.title1}
-                <br />
-                {Copy.footer.title2}
-                <></>
-              </div>
-              <div className={styles.footerDescription}>
-                {Copy.footer.description}
-              </div>
-              <div className={styles.social}>
-                <Icon className={styles.icon} iconName={"facebook"} />
-                <Icon className={styles.icon} iconName={"instagram"} />
-                <Icon className={styles.icon} iconName={"twitter"} />
-              </div>
-            </div>
-          </div>
-        </div>
+        <Footer theme={'light'}/>
       </section>
     </div>
   );
+  const secondPageContent = (
+    <div className={styles.appContainer}>
+      <section className={styles.section}>
+        <div className={styles.map}>
+          <div className={styles.button}>
+            <Button buttonText={"BACK TO HOME"} direction={"left"} />
+          </div>
+        </div>
+        <div className={styles.location}>
+          <div className={styles.locationHeader}>{Copy.pageThree.title}</div>
+          <div className={styles.locationAddressHeader}>{Copy.pageThree.addressHeader}</div>
+          <div className={styles.locationAddress}>
+            <div>{Copy.pageThree.address[0]}</div>
+            <div>{Copy.pageThree.address[1]}</div>
+            <div>{Copy.pageThree.address[2]}</div>
+          </div>
+          <div className={styles.locationContent}>{Copy.pageThree.description}</div>
+        </div>
+      </section>
+      <section className={styles.sectionSecondary}>
+        <Footer theme={'dark'}/>
+      </section>
+    </div>
+  );
+  return context.onHomePage ? mainPageContent : secondPageContent;
 };
 
 export default App;
