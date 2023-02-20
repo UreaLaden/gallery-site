@@ -7,6 +7,9 @@ export const styles = mergeStyleSets({
   },
   sectionOne: {
     position: "relative",
+    "@media screen and (min-width:1024px)": {
+      height: "100vh",
+    },
     "@media screen and (max-width:1023px)": {
       margin: 0,
     },
@@ -23,14 +26,14 @@ export const styles = mergeStyleSets({
       margin: "0 3%",
       display: "flex",
       height: "auto",
-      flexDirection:'row-reverse',
-      justifyContent:'space-between',
-      padding:"12% 0 1% 0"
+      flexDirection: "row-reverse",
+      justifyContent: "space-between",
+      padding: "12% 0 1% 0",
     },
     "@media screen and (max-width:750px)": {
       height: "auto",
       maxWidth: "100%",
-      flexDirection:'column',    
+      flexDirection: "column",
     },
   },
   sectionThree: {
@@ -58,6 +61,13 @@ export const styles = mergeStyleSets({
     },
   },
   headerContainer: {
+    "@media screen and (min-width:1024px)": {
+      height: "100%",
+      backgroundColor: Colors.AlmostBlack,
+      display: "flex",
+      flexDirection: "row-reverse",
+      width: "75%",
+    },
     "@media screen and (max-width:750px)": {
       height: "30vh",
     },
@@ -66,6 +76,15 @@ export const styles = mergeStyleSets({
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-around",
+    "@media screen and (min-width:1024px)": {
+      position: "absolute",
+      top: "23%",
+      left: "10%",
+      height: "40%",
+      width: "85%",
+      display: "grid",
+      gridTemplate: "1fr .25fr /1fr .42fr",
+    },
     "@media screen and (max-width:1023px)": {
       position: "absolute",
       top: "20%",
@@ -85,7 +104,7 @@ export const styles = mergeStyleSets({
     rowGap: "35%",
     "@media screen and (max-width:1023px)": {
       width: "40%",
-      rowGap:"40%",
+      rowGap: "40%",
       height: "auto",
       flexDirection: "column",
     },
@@ -166,6 +185,10 @@ export const styles = mergeStyleSets({
     },
   },
   headerImage: {
+    "@media screen and (min-width:1024px)": {
+      width: "auto",
+      maxHeight: "100%",
+    },
     "@media screen and (max-width:1023px)": {
       width: "60%",
       maxHeight: "100%",
@@ -184,13 +207,15 @@ export const styles = mergeStyleSets({
     },
   },
   contentHeader: {
+    "@media screen and (min-width:1023px)": {
+    },
     "@media screen and (max-width:1023px)": {
       ...Fonts.HeadingL,
       height: "auto",
     },
     "@media screen and (max-width:750px)": {
       //   transform: "scaleY(2)",
-      height:'auto'
+      height: "auto",
     },
   },
   titleInvert: {
@@ -260,6 +285,14 @@ export const styles = mergeStyleSets({
     },
   },
   contentDescription: {
+    "@media screen and (min-width:1023px)": {
+      ...Fonts.BodyS,
+      lineHeight: "4vh",
+      fontFamily: "Outline Light, sans-serif",
+      fontSize: "1.55vw",
+    //   height: "auto",
+      color: Colors.DarkGrey,
+    },
     "@media screen and (max-width:1023px)": {
       ...Fonts.BodyS,
       lineHeight: "2.65vh",
@@ -282,6 +315,12 @@ export const styles = mergeStyleSets({
   button: {
     height: "18%",
     width: "70%",
+    "@media screen and (min-width:1023px)": {
+      gridColumn: "2 / 3",
+      gridRow: "2 / 3",
+      height: "100%",
+      width: "80%",
+    },
   },
   mapButton: {
     "@media screen and (max-width:1023px)": {
@@ -323,9 +362,9 @@ export const styles = mergeStyleSets({
       height: "45vh",
       display: "flex",
       flexDirection: "column",
-    //   rowGap: "6vh",
-    //   padding: "3%",
-      justifyContent:'space-around'
+      //   rowGap: "6vh",
+      //   padding: "3%",
+      justifyContent: "space-around",
     },
   },
   locationHeader: {
@@ -344,10 +383,10 @@ export const styles = mergeStyleSets({
       fontSize: "3rem",
       letterSpacing: "0",
       fontWeight: "900",
-    //   lineHeight: "2vh",
-    //   paddingTop: "11%",
+      //   lineHeight: "2vh",
+      //   paddingTop: "11%",
       height: "auto",
-    //   transform: "scaleY(1.25)",
+      //   transform: "scaleY(1.25)",
     },
   },
   locationAddressHeader: {
@@ -371,10 +410,10 @@ export const styles = mergeStyleSets({
       fontSize: "2.3rem",
       letterSpacing: "0",
       fontWeight: "900",
-    //   lineHeight: "1.2vh",
+      //   lineHeight: "1.2vh",
       height: "auto",
-    //   transform: "scaleY(1.25)",
-    //   marginBottom: "-8%",
+      //   transform: "scaleY(1.25)",
+      //   marginBottom: "-8%",
     },
   },
   locationAddress: {
@@ -414,6 +453,19 @@ export const styles = mergeStyleSets({
     },
   },
   logo: {
+    "@media screen and (min-width:1024px)": {
+        paddingLeft:"2.12%",
+      svg: {
+        width: "100%",
+        height: "100%",
+        overflow:"visible",
+        path: {
+          transform: "scale(7)",
+          fill:Colors.White,
+          "mix-blend-mode":"difference",
+        },
+      },
+    },
     "@media screen and (max-width:1023px)": {
       svg: {
         width: 350,

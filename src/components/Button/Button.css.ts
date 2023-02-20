@@ -34,7 +34,15 @@ export const styles = mergeStyleSets({
     },
   },
   buttonMain: {
-    "@media screen and (max-width:960px)": {
+    "@media screen and (min-width:1023px)": {
+      backgroundColor: Colors.AlmostBlack,
+      height: "100%",
+      width: "80%",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+    },
+    "@media screen and (max-width:1023px)": {
       backgroundColor: Colors.AlmostBlack,
       height: "100%",
       width: "80%",
@@ -58,9 +66,21 @@ export const styles = mergeStyleSets({
     transform: "scaleY(1.82)",
     letterSpacing: "1px",
     padding: "0 10%",
+    "@media screen and (min-width:1023px)": {
+      letterSpacing:"2px",
+      fontSize:"1.3vw"
+    }
   },
   buttonSelector: {
-    "@media screen and (max-width:960px)": {
+    "@media screen and (min-width:1023px)": {
+      backgroundColor: Colors.Orange,
+      height: "100%",
+      width: "25%",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+    },
+    "@media screen and (max-width:1023px)": {
       backgroundColor: Colors.Orange,
       height: "100%",
       width: "25%",
