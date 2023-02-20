@@ -1,6 +1,6 @@
 # Frontend Mentor - Art gallery website solution
 
-This is a solution to the [Art gallery website challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/art-gallery-website-yVdrZlxyA). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Art gallery website challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/art-gallery-website-yVdrZlxyA). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -32,13 +32,18 @@ Users should be able to:
 
 ![](./screenshot.jpg)
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+<p align="center">
+<img src=./public/assets/screenshotMobile.png width="200" height="400"/>
+<img src=./public/assets/screenshotMobile2.png width="200" height="400"/>
+</p>
+<p align="center">
+<img src=./public/assets/screenshotTablet.png width="300" height="400"/>
+<img src=./public/assets/screenshotTablet2.png width="300" height="400"/>
+</p>
+<p align="center">
+<img src=./public/assets/screenshotDesktop.png width="600" height="400"/>
+<img src=./public/assets/screenshotDesktop2.png width="600" height="400"/>
+</p>
 
 ### Links
 
@@ -49,64 +54,64 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### Built with
 
-- Semantic HTML5 markup
-- CSS custom properties
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
+- [React Leaflet](https://react-leaflet.js.org/docs/start-setup/)
 
 **Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+In this project I made it a point to fully complete the mobile design first. Although this worked out alot better than my previous projects, I still found myself making adjustments when designing tablet and desktop views. I think for the next project I'll work on designing the completed layouts before adding any content.
 
-To see how you can add code snippets, see below:
+Probably a bit basic but i learned that this actually prevents updates to the padding from resizing the element.
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+* {
+  box-sizing: border-box;
 }
 ```
+
+Mix Blend Mode is pretty cool. It's the same concept as using a layer mask in photo editing. Really excited to use this in other projects.
+
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+logo: {
+    "@media screen and (min-width:1024px)": {
+      paddingLeft: "2.12%",
+      svg: {
+        width: "100%",
+        height: "100%",
+        overflow: "visible",
+        path: {
+          transform: "scale(7)",
+          fill: Colors.White,
+          "mix-blend-mode": "difference",
+        },
+      },
+    },
+};
 ```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+I want take a deeper dive into using Leaflet, specifically for implementing custom polygons and route mapping.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [React Leaflet Tutorial](https://blog.logrocket.com/react-leaflet-tutorial/) - The Official Leaflet Docs didn't really help too much as I was using React so this really helped me to get started.
+- [React Leaflet Docs](https://react-leaflet.js.org/docs/start-setup/) - Official Leaflet Documentation focused on React.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Website - [Leaundrae Mckinney](https://www.linkedin.com/in/leaundrae-mckinney/)
+- Frontend Mentor - [@UreaLaden](https://www.frontendmentor.io/profile/urealaden)
 
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+<table>
+  <tr>
+  <td align="center">
+    <img src="./public/assets/Leaundrae.png" width="100px">
+    <br/>
+    <a href="https://www.linkedin.com/in/leaundrae-mckinney/" alt="Leaundrae Mckinney">Leaundrae Mckinney</a>
+  </tr>
+</table>

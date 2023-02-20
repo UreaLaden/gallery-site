@@ -238,6 +238,7 @@ export const styles = mergeStyleSets({
       flexDirection: "column",
       justifyContent: "space-around",
       borderLeft:"20px solid white",
+      borderTop:"10px solid white"
     },
     "@media screen and (max-width:750px)": {
       margin: "3% 3% 3% 0",
@@ -294,9 +295,7 @@ export const styles = mergeStyleSets({
       fontFamily: "Big Shoulders Display Black, sans-serif",
       fontSize: "6rem",
       fontWeight: "900",
-      //   lineHeight: "5vh",
       height: "auto",
-      //   transform: "scaleY(1.5)",
       letterSpacing: "1px",
       padding: "0  6%",
     },
@@ -329,7 +328,6 @@ export const styles = mergeStyleSets({
     "mix-blend-mode": "difference",
     "@media screen and (min-width:1024px)": {
       ...Fonts.BodyS,
-      //   lineHeight: "2.8vh",
       padding: "0 4%",
       fontFamily: "Outline Light, sans-serif",
       fontSize: "3rem",
@@ -375,7 +373,6 @@ export const styles = mergeStyleSets({
       fontSize: "4.5rem",
       maxWidth: "82%",
       "overflow-wrap": "break-word",
-      //   wordSpacing:"12px",
       letterSpacing: "0",
       fontWeight: "900",
       lineHeight: "7vh",
@@ -389,7 +386,6 @@ export const styles = mergeStyleSets({
       lineHeight: "4vh",
       fontFamily: "Outline Light, sans-serif",
       fontSize: "1.55vw",
-      //   height: "auto",
       color: Colors.DarkGrey,
     },
     "@media screen and (max-width:1023px)": {
@@ -478,8 +474,6 @@ export const styles = mergeStyleSets({
       height: "45vh",
       display: "flex",
       flexDirection: "column",
-      //   rowGap: "6vh",
-      //   padding: "3%",
       justifyContent: "space-around",
     },
   },
@@ -508,10 +502,7 @@ export const styles = mergeStyleSets({
       fontSize: "3rem",
       letterSpacing: "0",
       fontWeight: "900",
-      //   lineHeight: "2vh",
-      //   paddingTop: "11%",
       height: "auto",
-      //   transform: "scaleY(1.25)",
     },
   },
   locationAddressHeader: {
