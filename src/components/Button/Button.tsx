@@ -12,11 +12,11 @@ const Button = (props: any) => {
   }
 
   return (
-    <div className={styles.container} onClick={onButtonClicked}>
+    <div className={direction === 'left'? styles.containerInverted :styles.container} onClick={onButtonClicked}>
       <div className={styles.buttonMain} id={"buttonMain"}>
         <div className={styles.buttonText}>{buttonText}</div>
       </div>
-      <div className={styles.buttonSelector} id={"buttonSelector"}>
+      <div className={ styles.buttonSelector} id={"buttonSelector"}>
         <Icon className={styles.buttonIcon} iconName={`arrow-${direction}`}/>
       </div>
     </div>

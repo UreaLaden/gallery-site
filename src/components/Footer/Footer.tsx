@@ -9,10 +9,7 @@ const Footer = (props:any) => {
           <div className={theme === 'light' ? styles.footerContainer : styles.footerContainerInverted}>
             <div className={styles.footerContent}>
               <div className={styles.footerHeader}>
-                {Copy.footer.title1}
-                <br />
-                {Copy.footer.title2}
-                <></>
+                <Icon iconName={theme}/>
               </div>
               <div className={styles.footerDescription}>
                 {Copy.footer.description}

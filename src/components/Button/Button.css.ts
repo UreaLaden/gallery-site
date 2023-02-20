@@ -17,7 +17,31 @@ export const styles = mergeStyleSets({
       },
     },
   },
+  containerInverted: {
+    width: "100%",
+    height: "100%",
+    color: Colors.White,
+    display: "flex",
+    flexDirection:"row-reverse",
+    ":hover": {
+        cursor:'pointer',
+      "#buttonMain": {
+        backgroundColor: Colors.Orange,
+      },
+      "#buttonSelector": {
+        backgroundColor: Colors.AlmostBlack,
+      },
+    },
+  },
   buttonMain: {
+    "@media screen and (max-width:960px)": {
+      backgroundColor: Colors.AlmostBlack,
+      height: "100%",
+      width: "80%",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+    },
     "@media screen and (max-width:750px)": {
       backgroundColor: Colors.AlmostBlack,
       height: "100%",
@@ -36,6 +60,14 @@ export const styles = mergeStyleSets({
     padding: "0 10%",
   },
   buttonSelector: {
+    "@media screen and (max-width:960px)": {
+      backgroundColor: Colors.Orange,
+      height: "100%",
+      width: "25%",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+    },
     "@media screen and (max-width:750px)": {
       backgroundColor: Colors.Orange,
       height: "100%",

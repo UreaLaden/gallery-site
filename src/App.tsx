@@ -6,7 +6,7 @@ import {
   WindowSpecs,
 } from "./store/galleryContext";
 import { Copy, Images, SVGIcons } from "./utils/helpers";
-import { registerIcons } from "@fluentui/react";
+import { Icon, registerIcons } from "@fluentui/react";
 import Button from "./components/Button/Button";
 import Footer from "./components/Footer/Footer";
 import Map from "./components/Map/Map";
@@ -29,7 +29,7 @@ const App = () => {
 
   const mainPageContent = (
     <div className={styles.appContainer}>
-      <section className={styles.section}>
+      <section className={styles.sectionOne}>
         <header className={styles.headerContainer}>
           <img
             className={styles.headerImage}
@@ -39,9 +39,7 @@ const App = () => {
         </header>
         <div className={styles.sectionContentContainer}>
           <div className={styles.contentHeader}>
-            {Copy.main.title1}
-            <br />
-            {Copy.main.title2}
+            <Icon className={styles.logo} iconName={"dark"}/>
           </div>
           <div className={styles.contentDescription}>
             {Copy.main.description}
@@ -51,7 +49,7 @@ const App = () => {
           </div>
         </div>
       </section>
-      <section className={styles.section}>
+      <section className={styles.sectionTwo}>
         <div className={styles.sectionImageContainer}>
           <img
             className={styles.sectionImage}
@@ -70,7 +68,7 @@ const App = () => {
           </div>
         </div>
       </section>
-      <section className={styles.section}>
+      <section className={styles.sectionThree}>
         <div className={styles.childSectionImages}>
           <img
             className={styles.sectionImage2}
@@ -97,7 +95,7 @@ const App = () => {
   );
   const secondPageContent = (
     <div className={styles.appContainer}>
-      <section className={styles.section}>
+      <section className={styles.sectionOne}>
         <div className={styles.map}>
           <div className={styles.mapButton}>
             <Button buttonText={"BACK TO HOME"} direction={"left"} />
