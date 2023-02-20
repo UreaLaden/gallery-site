@@ -62,6 +62,7 @@ export const Copy = {
   pageOne: {
     title1: "YOUR DAY",
     title2: "AT THE GALLERY",
+    title:"YOUR DAY AT THE GALLERY",
     description: "Wonder through our distinct collections and find new insights about our artists. Dive into the details of their creative process.",
   },
   pageTwo: {

@@ -59,9 +59,7 @@ const App = () => {
         </div>
         <div className={styles.childSectionContent}>
           <div className={styles.sectionHeader}>
-            {Copy.pageOne.title1}
-            <br />
-            {Copy.pageOne.title2}
+            {Copy.pageOne.title}
           </div>
           <div className={styles.contentDescription}>
             {Copy.pageOne.description}

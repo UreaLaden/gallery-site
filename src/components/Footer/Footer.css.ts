@@ -3,7 +3,11 @@ import { Colors, Fonts } from "../../utils/helpers";
 
 export const styles = mergeStyleSets({
   footer: {
-    "@media screen and (max-width:960px)": {
+    "@media screen and (min-width:1024px)": {
+      gridColumn:"1 / -1",
+      gridRow:"1 / -1",
+    },
+    "@media screen and (max-width:1023px)": {
       gridColumn:"1 / -1",
       gridRow:"2 / -1",
     },
@@ -15,7 +19,14 @@ export const styles = mergeStyleSets({
     },
   },
   footerContainer: {
-    "@media screen and (max-width:960px)": {
+    "@media screen and (min-width:1024px)": {
+      height: "100%",
+      maxWidth: "100%",
+      padding: "5%",
+      backgroundColor: Colors.AlmostBlack,
+      color: Colors.White,
+    },
+    "@media screen and (max-width:1023px)": {
       height: "100%",
       maxWidth: "100%",
       padding: "5% 3% 3% 3%",
@@ -31,7 +42,14 @@ export const styles = mergeStyleSets({
     },
   },
   footerContainerInverted: {
-    "@media screen and (max-width:960px)": {
+    "@media screen and (min-width:1024px)": {
+      height: "100%",
+      maxWidth: "100%",
+      padding: "5% 3% 3% 3%",
+      backgroundColor: Colors.Orange,
+      color: Colors.AlmostBlack,
+    },
+    "@media screen and (max-width:1023px)": {
       height: "100%",
       maxWidth: "100%",
       padding: "5% 3% 3% 3%",
@@ -47,7 +65,15 @@ export const styles = mergeStyleSets({
     },
   },
   footerContent: {
-    "@media screen and (max-width:960px)": {
+    "@media screen and (min-width:1024px)": {
+      width: "100%",
+      height: "100%",
+      display: "flex",
+      alignItems:'center',
+      justifyContent:"space-between",
+      columnGap:"5%"
+    },
+    "@media screen and (max-width:1023px)": {
       width: "100%",
       height: "100%",
       display: "flex",
@@ -64,7 +90,10 @@ export const styles = mergeStyleSets({
     },
   },
   footerHeader: {
-    "@media screen and (max-width:960px)": {
+    "@media screen and (min-width:1024px)": {
+      height:"100%"
+    },
+    "@media screen and (max-width:1023px)": {
       height:"100%"
     },
     "@media screen and (max-width:750px)": {
@@ -78,7 +107,15 @@ export const styles = mergeStyleSets({
     },
   },
   footerDescription: {
-    "@media screen and (max-width:960px)": {
+    "@media screen and (min-width:1024px)": {
+      ...Fonts.BodyS,
+      // lineHeight: "2.8vh",
+      fontFamily: "Outline Light, sans-serif",
+      fontSize: "2.3rem",
+      height: "100%",
+      width:"40%",
+    },
+    "@media screen and (max-width:1023px)": {
       ...Fonts.BodyS,
       lineHeight: "2.8vh",
       fontFamily: "Outline Light, sans-serif",
@@ -96,7 +133,14 @@ export const styles = mergeStyleSets({
     },
   },
   social: {
-    "@media screen and (max-width:960px)": {
+    "@media screen and (min-width:1024px)": {
+      width: "5%",
+      display: "flex",
+      justifyContent: "space-between",
+      height: "100%",
+      alignItems:'baseline'
+    },
+    "@media screen and (max-width:1023px)": {
       width: "15%",
       display: "flex",
       justifyContent: "space-between",

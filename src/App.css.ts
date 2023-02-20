@@ -22,6 +22,15 @@ export const styles = mergeStyleSets({
   },
   sectionTwo: {
     position: "relative",
+    "@media screen and (min-width:1023px)": {
+      margin: "0 8%",
+      display: "flex",
+      height: "auto",
+      flexDirection: "row-reverse",
+      justifyContent: "space-between",
+      padding: "10% 0 1% 0",
+      columnGap: "10%",
+    },
     "@media screen and (max-width:1023px)": {
       margin: "0 3%",
       display: "flex",
@@ -38,11 +47,20 @@ export const styles = mergeStyleSets({
   },
   sectionThree: {
     position: "relative",
+    "@media screen and (min-width:1024px)": {
+      margin: "0 8%",
+    },
     "@media screen and (max-width:1023px)": {
       margin: "0 3%",
     },
+    "@media screen and (max-width:750px)": {
+      height:"100vh"
+    },
   },
   sectionSecondary: {
+    "@media screen and (min-width:1024px)": {
+      height: "auto",
+    },
     "@media screen and (max-width:1023px)": {
       height: "auto",
     },
@@ -51,12 +69,16 @@ export const styles = mergeStyleSets({
     },
   },
   footerSection: {
+    "@media screen and (min-width:1024px)": {
+      display: "grid",
+      gridTemplate: "repeat(3,1fr) / repeat(7,1fr)",
+    },
     "@media screen and (max-width:1023px)": {
       display: "grid",
       gridTemplate: "repeat(3,1fr) / repeat(7,1fr)",
     },
     "@media screen and (max-width:750px)": {
-      height: "40vh",
+      height: "65vh",
       width: "100%",
     },
   },
@@ -102,6 +124,12 @@ export const styles = mergeStyleSets({
   childSectionContent: {
     display: "flex",
     rowGap: "35%",
+    "@media screen and (min-width:1024px)": {
+      flexDirection: "column",
+      width: "30%",
+      height: "100%",
+      rowGap: "5vh",
+    },
     "@media screen and (max-width:1023px)": {
       width: "40%",
       rowGap: "40%",
@@ -115,9 +143,16 @@ export const styles = mergeStyleSets({
     },
   },
   childSectionImages: {
+    "@media screen and (min-width:1024px)": {
+      //   margin: "0 3%",
+      height: "auto",
+      display: "grid",
+      gridTemplate: "repeat(14,1fr) / repeat(14,1fr)",
+    },
     "@media screen and (max-width:1023px)": {
       //   margin: "0 3%",
-      height: "60vh",
+      height: "auto",
+      maxHeight:"60vh",
       display: "grid",
       gridTemplate: "repeat(14,1fr) / repeat(14,1fr)",
     },
@@ -128,11 +163,17 @@ export const styles = mergeStyleSets({
     },
   },
   sectionImage2: {
+    "@media screen and (min-width:1024px)": {
+      gridColumn: "1 / 9",
+      gridRow: "1 / 13",
+      width: "100%",
+      height: "auto",
+    },
     "@media screen and (max-width:1023px)": {
       gridColumn: "1 / 10",
       gridRow: "1 / 15",
-      maxHeight: "100%",
-      width: "57.5vw",
+      width: "100%",
+      height: "100%",
     },
     "@media screen and (max-width:750px)": {
       width: "100%",
@@ -141,19 +182,31 @@ export const styles = mergeStyleSets({
     },
   },
   sectionImage3: {
-    "@media screen and (max-width:1023px)": {
+    "@media screen and (min-width:1024px)": {
       gridRow: "1 / 7",
+      gridColumn: "9 / 15",
+      maxWidth: "100%",
+      borderLeft: "20px solid white",
+    },
+    "@media screen and (max-width:1023px)": {
+      gridRow: "1 / 6",
       gridColumn: "10 / 15",
       maxWidth: "100%",
+      borderLeft:"20px solid white",
+    //   borderBottom:"20px solid white"
     },
     "@media screen and (max-width:750px)": {
       width: "100%",
       maxHeight: "30vh",
       maxWidth: "100%",
+      border:'none'
     },
   },
   sectionImageContainer: {
-    // margin: "0vw 3%",
+    "@media screen and (min-width:1024px)": {
+      maxWidth: "70%",
+      width: "70%",
+    },
     "@media screen and (max-width:1023px)": {
       maxHeight: "60vh",
       maxWidth: "50%",
@@ -165,6 +218,17 @@ export const styles = mergeStyleSets({
     },
   },
   callToAction: {
+    "@media screen and (min-width:1024px)": {
+      gridColumn: "9 / 15",
+      gridRow: "6 / 13",
+      backgroundColor: Colors.AlmostBlack,
+      width: "100%",
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "space-around",
+      borderLeft: "20px solid white",
+      borderTop: "20px solid white",
+    },
     "@media screen and (max-width:1023px)": {
       gridColumn: "10 / 15",
       gridRow: "7 / 15",
@@ -173,6 +237,7 @@ export const styles = mergeStyleSets({
       display: "flex",
       flexDirection: "column",
       justifyContent: "space-around",
+      borderLeft:"20px solid white",
     },
     "@media screen and (max-width:750px)": {
       margin: "3% 3% 3% 0",
@@ -182,6 +247,7 @@ export const styles = mergeStyleSets({
       display: "flex",
       flexDirection: "column",
       justifyContent: "space-around",
+      border:'none'
     },
   },
   headerImage: {
@@ -198,6 +264,9 @@ export const styles = mergeStyleSets({
     },
   },
   sectionImage: {
+    "@media screen and (min-width:1024px)": {
+      width: "100%",
+    },
     "@media screen and (max-width:1023px)": {
       width: "100%",
     },
@@ -207,8 +276,7 @@ export const styles = mergeStyleSets({
     },
   },
   contentHeader: {
-    "@media screen and (min-width:1023px)": {
-    },
+    "@media screen and (min-width:1023px)": {},
     "@media screen and (max-width:1023px)": {
       ...Fonts.HeadingL,
       height: "auto",
@@ -220,6 +288,18 @@ export const styles = mergeStyleSets({
   },
   titleInvert: {
     color: Colors.White,
+    "mix-blend-mode": "difference",
+    "@media screen and (min-width:1024px)": {
+      ...Fonts.HeadingL,
+      fontFamily: "Big Shoulders Display Black, sans-serif",
+      fontSize: "6rem",
+      fontWeight: "900",
+      //   lineHeight: "5vh",
+      height: "auto",
+      //   transform: "scaleY(1.5)",
+      letterSpacing: "1px",
+      padding: "0  6%",
+    },
     "@media screen and (max-width:1023px)": {
       ...Fonts.HeadingL,
       fontFamily: "Big Shoulders Display Black, sans-serif",
@@ -246,6 +326,15 @@ export const styles = mergeStyleSets({
   },
   descriptionInvert: {
     color: Colors.White,
+    "mix-blend-mode": "difference",
+    "@media screen and (min-width:1024px)": {
+      ...Fonts.BodyS,
+      //   lineHeight: "2.8vh",
+      padding: "0 4%",
+      fontFamily: "Outline Light, sans-serif",
+      fontSize: "3rem",
+      height: "45%",
+    },
     "@media screen and (max-width:1023px)": {
       ...Fonts.BodyS,
       lineHeight: "2.8vh",
@@ -262,6 +351,14 @@ export const styles = mergeStyleSets({
     },
   },
   sectionHeader: {
+    "@media screen and (min-width:1024px)": {
+      ...Fonts.HeadingL,
+      fontFamily: "Big Shoulders Display Black, sans-serif",
+      fontSize: "5vh",
+      fontWeight: "900",
+      paddingTop: "10%",
+      maxWidth: "70%",
+    },
     "@media screen and (max-width:1023px)": {
       ...Fonts.HeadingL,
       fontFamily: "Big Shoulders Display Black, sans-serif",
@@ -276,7 +373,9 @@ export const styles = mergeStyleSets({
       ...Fonts.HeadingL,
       fontFamily: "Big Shoulders Display Black, sans-serif",
       fontSize: "4.5rem",
-      maxWidth: "90%",
+      maxWidth: "82%",
+      "overflow-wrap": "break-word",
+      //   wordSpacing:"12px",
       letterSpacing: "0",
       fontWeight: "900",
       lineHeight: "7vh",
@@ -290,7 +389,7 @@ export const styles = mergeStyleSets({
       lineHeight: "4vh",
       fontFamily: "Outline Light, sans-serif",
       fontSize: "1.55vw",
-    //   height: "auto",
+      //   height: "auto",
       color: Colors.DarkGrey,
     },
     "@media screen and (max-width:1023px)": {
@@ -323,6 +422,14 @@ export const styles = mergeStyleSets({
     },
   },
   mapButton: {
+    "@media screen and (min-width:1024px)": {
+      height: "6vh",
+      width: "20%",
+      position: "absolute",
+      top: 0,
+      left: 120,
+      "z-index": 5,
+    },
     "@media screen and (max-width:1023px)": {
       height: "6vh",
       width: "40%",
@@ -342,6 +449,9 @@ export const styles = mergeStyleSets({
   },
 
   map: {
+    "@media screen and (min-width:1024px)": {
+      height: "50vh",
+    },
     "@media screen and (max-width:1023px)": {
       height: "50vh",
     },
@@ -352,6 +462,12 @@ export const styles = mergeStyleSets({
   location: {
     backgroundColor: Colors.AlmostBlack,
     color: Colors.White,
+    "@media screen and (min-width:1024px)": {
+      height: "50vh",
+      padding: "3vw",
+      display: "grid",
+      gridTemplate: "repeat(7,1fr) /3vw repeat(7,1fr) 3vw",
+    },
     "@media screen and (max-width:1023px)": {
       height: "35vh",
       padding: "3vw",
@@ -368,6 +484,15 @@ export const styles = mergeStyleSets({
     },
   },
   locationHeader: {
+    "@media screen and (min-width:1024px)": {
+      ...Fonts.HeadingL,
+      fontFamily: "Big Shoulders Display Black, sans-serif",
+      fontSize: "4rem",
+      letterSpacing: "0",
+      fontWeight: "900",
+      gridRow: "2 / 4",
+      gridColumn: "2 / 3",
+    },
     "@media screen and (max-width:1023px)": {
       ...Fonts.HeadingL,
       fontFamily: "Big Shoulders Display Black, sans-serif",
@@ -391,16 +516,21 @@ export const styles = mergeStyleSets({
   },
   locationAddressHeader: {
     color: Colors.Orange,
+    "@media screen and (min-width:1024px)": {
+      ...Fonts.HeadingL,
+      fontFamily: "Big Shoulders Display Black, sans-serif",
+      fontSize: "2.3rem",
+      letterSpacing: "0",
+      fontWeight: "900",
+      gridColumn: "5 / 8",
+      gridRow: "2 / 3",
+    },
     "@media screen and (max-width:1023px)": {
       ...Fonts.HeadingL,
       fontFamily: "Big Shoulders Display Black, sans-serif",
       fontSize: "2.3rem",
       letterSpacing: "0",
       fontWeight: "900",
-      //   lineHeight: "2vh",
-      //   height: "0%",
-      //   transform: "scaleY(1.25)",
-      //   marginBottom: "-8%",
       gridColumn: "5 / 8",
       gridRow: "2 / 3",
     },
@@ -410,20 +540,21 @@ export const styles = mergeStyleSets({
       fontSize: "2.3rem",
       letterSpacing: "0",
       fontWeight: "900",
-      //   lineHeight: "1.2vh",
       height: "auto",
-      //   transform: "scaleY(1.25)",
-      //   marginBottom: "-8%",
     },
   },
   locationAddress: {
-    "@media screen and (max-width:1023px)": {
+    "@media screen and (min-width:1024px)": {
       ...Fonts.BodyS,
-      //   lineHeight: "3.1vh",
       fontFamily: "Outline Light, sans-serif",
       fontSize: "1.5rem",
-      //   height: "0",
-      //   marginBottom: "5%",
+      gridRow: "3 / 7",
+      gridColumn: "5 / 8",
+    },
+    "@media screen and (max-width:1023px)": {
+      ...Fonts.BodyS,
+      fontFamily: "Outline Light, sans-serif",
+      fontSize: "1.5rem",
       gridRow: "3 / 7",
       gridColumn: "5 / 8",
     },
@@ -435,12 +566,18 @@ export const styles = mergeStyleSets({
     },
   },
   locationContent: {
+    "@media screen and (min-width:1024px)": {
+      ...Fonts.BodyS,
+      fontFamily: "Outline Light, sans-serif",
+      fontSize: "2rem",
+      lineHeight:"3.5vh",
+      gridColumn: "5 / 8",
+      gridRow: "5 / 8",
+    },
     "@media screen and (max-width:1023px)": {
       ...Fonts.BodyS,
-      //   lineHeight: "3.1vh",
       fontFamily: "Outline Light, sans-serif",
       fontSize: "1.5rem",
-      //   height: "25%",
       gridColumn: "5 / 9",
       gridRow: "5 / 8",
     },
@@ -454,15 +591,15 @@ export const styles = mergeStyleSets({
   },
   logo: {
     "@media screen and (min-width:1024px)": {
-        paddingLeft:"2.12%",
+      paddingLeft: "2.12%",
       svg: {
         width: "100%",
         height: "100%",
-        overflow:"visible",
+        overflow: "visible",
         path: {
           transform: "scale(7)",
-          fill:Colors.White,
-          "mix-blend-mode":"difference",
+          fill: Colors.White,
+          "mix-blend-mode": "difference",
         },
       },
     },
